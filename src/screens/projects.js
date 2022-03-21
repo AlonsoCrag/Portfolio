@@ -14,7 +14,7 @@ export default () => {
     })
 
     const request = async () => {
-        let accessToken = 'token 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';
+        let accessToken = 'token id';
         let url = 'https://api.github.com/user/repos'
         let resp = await fetch(url, {
             method: 'GET',
