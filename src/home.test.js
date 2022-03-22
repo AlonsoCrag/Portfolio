@@ -4,5 +4,5 @@ import Home from './screens/home';
 
 test('Home page is mounted', () => {
     render(<Home />);
-    expect(screen.queryByText("Building custom microservicesss")).toBeNull();
+    expect(screen.queryByText("Building custom microservices")).toBeNull();
 })
