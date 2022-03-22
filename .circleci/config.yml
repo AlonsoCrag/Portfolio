@@ -5,7 +5,7 @@ jobs:
   build:
     docker:
       - image: node:11.10.1
-      - image: "javieraviles/sshpass"
+      - image: javieraviles/sshpass
 
     working_directory: ~/repo
 
