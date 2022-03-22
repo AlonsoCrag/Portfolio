@@ -6,7 +6,7 @@ class NavBar extends Component {
     render() {
         return (
             <nav className="border-gray-200 sticky top-0 px-2 sm:px-4 py-2.5 bg-[#131313]">
-                <div className="container flex flex-wrap justify-between items-center mx-auto container mx-auto max-w-7xl">
+                <div className="container flex flex-wrap justify-between items-center container mx-auto max-w-7xl">
                     <a href="/" className="flex items-center">
                         <span className="self-center text-xl font-semibold whitespace-nowrap text-white">Bearz</span>
                         <span className="self-center text-xl font-semibold whitespace-nowrap text-red-600 mx-1"> | </span>

@@ -7,14 +7,16 @@ export default () => {
 
     let [ repos, updateRepos ] = useState(null);
 
+    let state = 'WAIT';
+
     useEffect(() => {
-        if (repos === null) {
+        if (repos === null && state != 'WAIT') {
             request();
         }
     })
 
     const request = async () => {
-        let accessToken = 'token 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';
+        let accessToken = 'token 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';
         let url = 'https://api.github.com/user/repos'
         let resp = await fetch(url, {
             method: 'GET',
@@ -23,9 +25,9 @@ export default () => {
             }
         });
         let response = await resp.json();
-        console.log("response status code", resp.status);
+        // console.log("response status code", resp.status);
         updateRepos(response);
-        console.log(response);
+        // console.log(response);
     }
     
 
@@ -63,8 +65,39 @@ export default () => {
                         )) : null
                     }
                 </div>
+                {
+                    state == 'WAIT' ?  (
+                        <div className='my-2'>
+                            <p className='text-blue-700 text-3xl text-center font-bold mx-4'>
+                                Comming soon ...
+                            </p>
+                            <p className='text-white text-1xl text-center font-bold mx-4'>
+                                <span className='text-3xl'>
+                                    😀
+                                </span>
+                                For the moment you can watch those pizza dancers
+                                <span className='text-3xl'>
+                                    😀
+                                </span>
+                            </p>
+                            <div className='flex flex-wrap justify-center align-items-center'>
+                                <div className='mt-4 mx-2 w-64 h-64 rounded-full border-4 border-blue-700'>
+                                    <img className='rounded-full w-full h-full object-cover' src="https://media4.giphy.com/media/3osxYoufeOGOA7xiX6/giphy.gif?cid=ecf05e4762e485lvwji6q9yalrwnf3nvytlwoelcq9knrwvz&rid=giphy.gif&ct=g" />
+                                </div>
+                                <div className='mt-4 mx-2 w-64 h-64 rounded-full border-4 border-blue-700'>
+                                    <img className='rounded-full w-full h-full object-cover' src="https://media4.giphy.com/media/3osxYoufeOGOA7xiX6/giphy.gif?cid=ecf05e4762e485lvwji6q9yalrwnf3nvytlwoelcq9knrwvz&rid=giphy.gif&ct=g" />
+                                </div>
+                                <div className='mt-4 mx-2 w-64 h-64 rounded-full border-4 border-blue-700'>
+                                    <img className='rounded-full w-full h-full object-cover' src="https://media4.giphy.com/media/3osxYoufeOGOA7xiX6/giphy.gif?cid=ecf05e4762e485lvwji6q9yalrwnf3nvytlwoelcq9knrwvz&rid=giphy.gif&ct=g" />
+                                </div>
+                            </div>
+                        </div>
+                    ) : null
+                }
             </div>
-            <Footer />
+            <div className='flex'>
+                <Footer pos="absolute" />
+            </div>
         </div>
     );
 }
