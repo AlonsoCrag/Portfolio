@@ -1,0 +1,10 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: node:11.10.1
+
+    steps:
+      - run:
+          name: Just a simple command
+          command: echo 'Elmer cabezon world wide'
