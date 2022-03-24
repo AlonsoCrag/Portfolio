@@ -7,6 +7,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Node version
+          command: node --version
+      - run:
           name: First step
           command: echo 'CircleCI pipeline'
       - run:
