@@ -2,10 +2,13 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: node:11.10.1
+      - image: node:16.14.0
 
     steps:
       - checkout
+      - run:
+          name: Node version
+          command: node --version
       - run:
           name: First step
           command: echo 'CircleCI pipeline'
@@ -18,3 +21,8 @@ jobs:
       - run:
           name: Run tests
           command: npm run test
+      - run:
+          name: Build the application to deploy
+          command: |
+            npm run build
+            ls
