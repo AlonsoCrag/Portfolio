@@ -15,3 +15,6 @@ jobs:
             npm install
             echo 'Files in current directory are: \n'
             ls
+      - run:
+          name: Run tests
+          command: npm run test
