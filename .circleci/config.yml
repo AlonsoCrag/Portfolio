@@ -10,7 +10,8 @@ jobs:
           name: First step
           command: echo 'CircleCI pipeline'
       - run:
-          name: Second step
+          name: Install React.js Dependencies
           command: |
+            npm install
+            echo 'Files in current directory are: \n'
             ls
-            echo 'Thats it for now'
