@@ -18,3 +18,8 @@ jobs:
       - run:
           name: Run tests
           command: npm run test
+      - run:
+          name: Build the application to deploy
+          command: |
+            npm run build
+            ls
