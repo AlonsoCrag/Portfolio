@@ -5,6 +5,12 @@ jobs:
       - image: node:11.10.1
 
     steps:
+      - checkout
       - run:
-          name: Just a simple command
-          command: echo 'Elmer cabezon world wide'
+          name: First step
+          command: echo 'CircleCI pipeline'
+      - run:
+          name: Second step
+          command: |
+            ls
+            echo 'Thats it for now'
