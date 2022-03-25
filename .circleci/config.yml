@@ -18,3 +18,12 @@ jobs:
     steps:
       - run:
           command: echo 'deployment'
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
