@@ -2,28 +2,10 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: node:16.14.0
       - image: docker:17.05.0-ce-git
 
     steps:
       - checkout
       - run:
           name: Node version
-          command: node --version
-      - run:
-          name: First step
-          command: echo 'CircleCI pipeline'
-      - run:
-          name: Install React.js Dependencies
-          command: |
-            npm install
-            echo 'Files in current directory are: \n'
-            ls
-      - run:
-          name: Run tests
-          command: npm run test
-      - run:
-          name: Build the application to deploy
-          command: |
-            npm run build
-            ls
+          command: echo 'Docker is here'
