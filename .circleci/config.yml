@@ -10,5 +10,12 @@ jobs:
           name: Node version
           command: |
             echo 'Docker is here'
-            docker --version
+            sudo docker --version
             node -v
+  
+  deploy:
+    machine:
+      enabled: true
+    steps:
+      - run:
+          command: echo 'deployment'
