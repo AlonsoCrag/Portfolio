@@ -11,13 +11,6 @@ jobs:
           command: |
             echo 'NodeJS is here'
             node -v
-      - run:
-          command: |
-            npm install
-            ls
-      - run: 
-          name: Run Tests
-          command: npm run test
   
   deploy:
     machine:
