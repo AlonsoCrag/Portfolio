@@ -26,7 +26,7 @@ jobs:
       - run:
           command: |
             echo 'Deployment succed, congrats!'
-      - run: ssh alonso@bearzg.xyz
+      - run: ssh circlei@bearzg.xyz
 
 workflows:
   version: 2
