@@ -3,7 +3,6 @@ jobs:
   build:
     docker:
       - image: node:11.10.1
-      - image: arvindr226/alpine-ssh
 
     steps:
       - checkout
@@ -27,6 +26,7 @@ jobs:
       - run:
           command: |
             echo 'Deployment succed, congrats!'
+      - run: ssh alonso@bearzg.xyz
 
 workflows:
   version: 2
