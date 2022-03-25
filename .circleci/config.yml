@@ -12,6 +12,10 @@ jobs:
             echo 'NodeJS is here'
             node -v
             docker -v
+      - run:
+          command: |
+            npm install
+            ls
   
   deploy:
     machine:
