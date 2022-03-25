@@ -19,7 +19,7 @@ jobs:
       - run:
           command: |
             echo 'Deployment succed, congrats!'
-      - run: ssh -oStrictHostKeyChecking=no -v $USER@$IP "echo 'Ubuntu is here' bash ./deploy.sh "
+      - run: ssh -oStrictHostKeyChecking=no -v $USER@$IP "./deploy.sh "
 
 workflows:
   version: 2
