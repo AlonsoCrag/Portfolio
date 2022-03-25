@@ -8,4 +8,6 @@ jobs:
       - checkout
       - run:
           name: Node version
-          command: echo 'Docker is here'
+          command: |
+            echo 'Docker is here'
+            docker --version
