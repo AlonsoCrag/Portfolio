@@ -11,3 +11,4 @@ jobs:
           command: |
             echo 'Docker is here'
             docker --version
+            node -v
