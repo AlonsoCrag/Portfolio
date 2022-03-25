@@ -9,8 +9,7 @@ jobs:
       - run:
           name: Node version
           command: |
-            echo 'Docker is here'
-            sudo docker --version
+            echo 'NodeJS is here'
             node -v
   
   deploy:
