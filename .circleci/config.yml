@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: node:16.14.0
+      - image: docker:17.05.0-ce-git
 
     steps:
       - checkout
