@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: wecs/circle-ci-gcloud-node:0.1.0
+      - image: ubuntu:bionic-20220315
 
     steps:
       - checkout
