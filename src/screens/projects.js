@@ -7,7 +7,8 @@ export default () => {
 
     let [ repos, updateRepos ] = useState(null);
 
-    let state = 'WAIT';
+    // let state = 'WAIT';
+    let state = 'READY';
 
     useEffect(() => {
         if (repos === null && state != 'WAIT') {
