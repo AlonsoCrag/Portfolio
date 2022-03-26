@@ -2,27 +2,36 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: node:16.14.0
+      - image: node:11.10.1
 
     steps:
       - checkout
       - run:
           name: Node version
-          command: node --version
-      - run:
-          name: First step
-          command: echo 'CircleCI pipeline'
-      - run:
-          name: Install React.js Dependencies
           command: |
-            npm install
-            echo 'Files in current directory are: \n'
-            ls
+            echo 'NodeJS is Installed'
+            node -v
+      - run:
+          name: Installl npm dependencies
+          command: npm install
       - run:
           name: Run tests
           command: npm run test
+  
+  deploy:
+    machine:
+      enabled: true
+    steps:
       - run:
-          name: Build the application to deploy
           command: |
-            npm run build
-            ls
+            echo 'Deployment succed, congrats!'
+      - run: ssh -oStrictHostKeyChecking=no -v $USER@$IP "bash ./deploy.sh "
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
