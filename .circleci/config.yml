@@ -9,8 +9,14 @@ jobs:
       - run:
           name: Node version
           command: |
-            echo 'NodeJS is here'
+            echo 'NodeJS is Installed'
             node -v
+      - run:
+          name: Installl npm dependencies
+          command: npm install
+      - run:
+          name: Run tests
+          command: npm run test
   
   deploy:
     machine:
