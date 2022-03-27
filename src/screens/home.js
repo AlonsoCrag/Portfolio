@@ -32,9 +32,9 @@ export default () => {
                 <div className='grid grid-cols-1'>
                     <div className='mt-2 m-4'>
                         <h1 className='text-2xl font-bold text-white text-center'>
-                            Hey there, welcome to my personal portfolio, i'd like to be called by my username
+                            Hey there, welcome to my personal portfolio, you can call me
                             <span className='text-blue-700'> Bearz </span>
-                            for the science
+                            if you want
                         </h1>
                         <h1 className='text-2xl font-bold text-blue-700 text-center'>
                             Developing custom web products, mobile-desktop applications, database management, sites, backend systems.
