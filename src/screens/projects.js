@@ -17,8 +17,8 @@ export default () => {
     })
 
     const request = async () => {
-
-        let accessToken = 'token id_Account';
+        console.log("Acces token", process.env.REACT_APP_TOKEN)
+        let accessToken = 'token' + ' ' + process.env.REACT_APP_TOKEN;
         let url = 'https://api.github.com/user/repos'
         let resp = await fetch(url, {
             method: 'GET',
@@ -98,7 +98,7 @@ export default () => {
                 }
             </div>
             <div className='flex'>
-                <Footer pos="absolute" />
+                <Footer pos="relative" />
             </div>
         </div>
     );

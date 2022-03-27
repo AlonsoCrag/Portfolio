@@ -4,6 +4,7 @@ import Footer from '../components/footer';
 import copy from "copy-to-clipboard"
 import Bearz from '../assets/images/Bearz.jpg';
 
+
 export default () => {
 
     useEffect(() => {
