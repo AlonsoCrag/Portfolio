@@ -8,7 +8,7 @@ All my public projects will be auto published to my portfolio
 
 ## Bearz#0220
 
-Feel free to add me in Discord and tell me about your ideas.
+Feel free to contact me in Discord
 
 ### `YouTube Channel`
 You can subscribe to my [YouTube channel](https://www.youtube.com/c/BearzMitosisTheGame/)
