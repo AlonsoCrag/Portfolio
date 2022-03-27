@@ -17,8 +17,7 @@ export default () => {
     })
 
     const request = async () => {
-        console.log("Access token", process.env.TOKEN)
-        let accessToken = 'token ' + process.env.TOKEN;
+        let accessToken = 'token ' + process.env.REACT_APP_TOKEN;
         let url = 'https://api.github.com/user/repos'
         let resp = await fetch(url, {
             method: 'GET',
