@@ -59,10 +59,10 @@ export default () => {
                             {
                                 if (!element.private){
                                     return ( 
-                                        <div key={element.name} className='py-1 group hover:bg-cyan-500 bg-[#101010] flex justify-center items-center m-4 rounded-t' >
+                                        <div key={element.name} className='py-1 group hover:bg-cyan-500 bg-[#101010] flex flex-wrap justify-center items-center m-4 rounded-t' >
                                             <p className='text-white text-center font-bold mx-4'>{element.name}</p>
                                             <p className='text-blue-700 text-center font-bold mx-4'>{element.language}</p>
-                                            <button onClick={() => window.open(element.clone_url)} className='group-hover:bg-blue-700 group-hover:text-white bg-white text-black font-bold p-2 rounded'>
+                                            <button onClick={() => window.open(element.clone_url)} className='my-0 sm:text-cyan-500 md:text-purple-500 lg:text-red-60 group-hover:bg-blue-700 group-hover:text-white bg-white font-bold p-2 rounded'>
                                                 Go
                                             </button>
                                         </div>
