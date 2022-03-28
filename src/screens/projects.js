@@ -7,8 +7,8 @@ export default () => {
 
     let [ repos, updateRepos ] = useState(null);
 
-    let state = 'WAIT';
-    // let state = 'READY';
+    // let state = 'WAIT';
+    let state = 'READY';
 
     useEffect(() => {
         if (repos === null && state != 'WAIT') {
@@ -28,7 +28,7 @@ export default () => {
         let response = await resp.json();
         // console.log("response status code", resp.status);
         updateRepos(response);
-        // console.log(response);
+        console.log(response);
     }
     
 
@@ -50,20 +50,26 @@ export default () => {
                         Developing custom web products, mobile-desktop applications, database management, sites, backend systems.
                     </h1>
                 </div>
-                <div className='group mx-auto my-4 grid grid-cols-1 w-1/2 bg-[#131313] rounded'>
+                <div className='mx-auto my-4 grid grid-cols-1 w-1/2 bg-[#131313] rounded'>
                     <div className=''>
                         <p className='text-white text-3xl text-center font-bold mx-4'>Projects</p>
                     </div>
                     {
-                        repos !== null ? repos.map(element => (
-                            <div key={element.name} className='py-1 group hover:bg-cyan-500 bg-[#101010] flex justify-center items-center m-4 rounded-t' >
-                                <p className='text-white text-center font-bold mx-4'>{element.name}</p>
-                                <p className='text-blue-700 text-center font-bold mx-4'>{element.language}</p>
-                                <button onClick={() => window.open(element.clone_url)} className='bg-white text-black font-bold p-2 rounded'>
-                                    Go
-                                </button>
-                            </div>
-                        )) : null
+                        repos !== null ? repos.map(element =>  
+                            {
+                                if (!element.private){
+                                    return ( 
+                                        <div key={element.name} className='py-1 group hover:bg-cyan-500 bg-[#101010] flex justify-center items-center m-4 rounded-t' >
+                                            <p className='text-white text-center font-bold mx-4'>{element.name}</p>
+                                            <p className='text-blue-700 text-center font-bold mx-4'>{element.language}</p>
+                                            <button onClick={() => window.open(element.clone_url)} className='group-hover:bg-blue-700 group-hover:text-white bg-white text-black font-bold p-2 rounded'>
+                                                Go
+                                            </button>
+                                        </div>
+                                    )
+                                }
+                            }
+                        ) : null
                     }
                 </div>
                 {
@@ -97,7 +103,7 @@ export default () => {
                 }
             </div>
             <div className='flex'>
-                <Footer pos="relative" />
+                <Footer pos="absolute" />
             </div>
         </div>
     );

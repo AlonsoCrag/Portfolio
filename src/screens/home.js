@@ -28,7 +28,7 @@ export default () => {
     return (
         <div className=''>
             <NavBar />
-            <div className='container max-w-7xl mx-auto' id='application'>
+            <div className='container max-w-6xl mx-auto' id='application'>
                 <div className='grid grid-cols-1'>
                     <div className='mt-2 m-4'>
                         <h1 className='text-2xl font-bold text-white text-center'>
