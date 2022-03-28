@@ -103,7 +103,7 @@ export default () => {
                 }
             </div>
             <div className='flex'>
-                <Footer pos="absolute" />
+                <Footer pos="relative" />
             </div>
         </div>
     );
