@@ -26,7 +26,9 @@ export default () => {
         });
         let response = await resp.json();
         if (response.length !== JSON.parse(localStorage.getItem("Repos"))?.length) {
-            updateRepos(response);
+            if (!JSON.parse(localStorage.getItem("Repos"))?.length) {
+                updateRepos(response);
+            }
             localStorage.setItem("Repos", JSON.stringify(response))
             return;
         }
