@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import NavBar from '../components/navbar';
 import Footer from '../components/footer';
 
-
 export default () => {
 
     let [ repos, updateRepos ] = useState(null);
@@ -26,9 +25,11 @@ export default () => {
             }
         });
         let response = await resp.json();
-        // console.log("response status code", resp.status);
-        updateRepos(response);
-        console.log(response);
+        if (response.length !== JSON.parse(localStorage.getItem("Repos"))?.length) {
+            updateRepos(response);
+            localStorage.setItem("Repos", JSON.stringify(response))
+            return;
+        }
     }
     
 
@@ -55,9 +56,10 @@ export default () => {
                         <p className='text-white text-3xl text-center font-bold mx-4'>Projects</p>
                     </div>
                     {
+                        
                         repos !== null ? repos.map(element =>  
                             {
-                                if (!element.private){
+                                if (!element.private) {
                                     return ( 
                                         <div key={element.name} className='py-1 group hover:bg-cyan-500 bg-[#101010] flex flex-wrap justify-center items-center m-4 rounded-t' >
                                             <p className='text-white text-center font-bold mx-4'>{element.name}</p>
@@ -70,7 +72,30 @@ export default () => {
                                 }
                             }
                         ) : null
+
                     }
+
+
+                    {
+                        
+                        JSON.parse(localStorage.getItem("Repos")) !== null ? JSON.parse(localStorage.getItem("Repos")).map(element =>  
+                            {
+                                if (!element.private) {
+                                    return ( 
+                                        <div key={element.name} className='py-1 group hover:bg-cyan-500 bg-[#101010] flex flex-wrap justify-center items-center m-4 rounded-t' >
+                                            <p className='text-white text-center font-bold mx-4'>{element.name}</p>
+                                            <p className='text-blue-700 text-center font-bold mx-4'>{element.language}</p>
+                                            <button onClick={() => window.open(element.clone_url)} className='my-0 sm:text-cyan-500 md:text-purple-500 lg:text-red-60 group-hover:bg-blue-700 group-hover:text-white bg-white font-bold p-2 rounded'>
+                                                Go
+                                            </button>
+                                        </div>
+                                    )
+                                }
+                            }
+                        ) : null
+
+                    }
+
                 </div>
                 {
                     state == 'WAIT' ?  (
