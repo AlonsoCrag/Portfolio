@@ -82,20 +82,20 @@ export default () => {
                     <div className='p-2 group'>
                         <p className='bg-blue-900 rounded opacity-0 group-hover:opacity-100 relative text-center text-white font-bold'>Bearz#0220</p>
                         <button onClick={ () => updateCopyText("Bearz#0220") }>
-                            <i class="fa-brands fa-discord group text-white px-3 py-3 m-2 text-2xl bg-gray-800 rounded-full shadow-md shadow-gray-800"></i>
+                            <i className="fa-brands fa-discord group text-white px-3 py-3 m-2 text-2xl bg-gray-800 rounded-full shadow-md shadow-gray-800"></i>
                         </button>
                     </div>
                     {textCopy !== null ? <p className='text-white text-2xl shadow-md font-bold absolute z-50 bg-blue-700 rounded px-1'>Copied to clipboard</p> : null}
                     <div className='p-2 group'>
                         <p className='bg-red-800 rounded opacity-0 group-hover:opacity-100 relative text-center text-white font-bold'>Youtube</p>
                         <a href='https://www.youtube.com/c/BearzMitosisTheGame/' target="_blank" rel="noopener">
-                            <i class="fa-brands fa-youtube text-white px-3 py-3 m-2 text-2xl bg-red-600 rounded-full shadow-md shadow-red-600"></i>
+                            <i className="fa-brands fa-youtube text-white px-3 py-3 m-2 text-2xl bg-red-600 rounded-full shadow-md shadow-red-600"></i>
                         </a>
                     </div>
                     <div className='p-2 group'>
                         <p className='bg-green-900 rounded opacity-0 group-hover:opacity-100 relative text-center text-white font-bold'>Github</p>
                         <a href='https://github.com/AlonsoCrag' target="_blank" rel="noopener">
-                            <i class="fa-brands fa-github text-white px-3 py-3 m-2 text-2xl bg-green-600 rounded-full shadow-md shadow-green-600"></i>
+                            <i className="fa-brands fa-github text-white px-3 py-3 m-2 text-2xl bg-green-600 rounded-full shadow-md shadow-green-600"></i>
                         </a>
                     </div>
                 </div>
