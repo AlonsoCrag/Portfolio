@@ -57,10 +57,9 @@ function registerValidSW(swUrl, config) {
     .register(swUrl)
     .then((registration) => {
       registration.onupdatefound = () => {
+        registration.waiting.postMessage({type: 'SKIP_WAITING'}) // This lind trigger the event listener in 'service-worker.js' to fetch the new content to be ready for the next close-open action
+        console.log("A new update is waiting to be applied!");
         const installingWorker = registration.installing;
-        if (installingWorker == null) {
-          return;
-        }
         installingWorker.onstatechange = () => {
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {
@@ -89,7 +88,7 @@ function registerValidSW(swUrl, config) {
             }
           }
         };
-      };
+      }; //
     })
     .catch((error) => {
       console.error('Error during service worker registration:', error);
