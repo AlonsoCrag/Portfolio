@@ -7,13 +7,13 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Bearz 2022 - Official Portfolio"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <title>Bearz - Developer</title>
+    <title>Bearz - Devs</title>
   </head>
   <body>
 
@@ -42,5 +42,16 @@
 
     </script>
     
+    <script src="%PUBLIC_URL%/wasm_exec.js"></script>
+
+    <script>
+      
+      const go = new Go();
+      WebAssembly.instantiateStreaming(fetch("%PUBLIC_URL%/golang.wasm"), go.importObject).then((result) => {
+        go.run(result.instance);
+      });
+
+  </script>
+
   </body>
 </html>
