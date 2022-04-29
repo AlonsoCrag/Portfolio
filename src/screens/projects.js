@@ -38,7 +38,7 @@ export default () => {
     return (
         <div className=''>
             <NavBar />
-            <div className='container max-w-7xl mx-auto'>
+            <div className='container max-w-6xl mx-auto'>
                 <div className='mt-2 m-4'>
                     <h1 className='text-2xl font-bold text-white text-center'>
                         Some of my projects are listed down below and you can also find them in my
