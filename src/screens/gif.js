@@ -43,7 +43,7 @@ export default () => {
         formData.append("name", fileName);
         formData.append("fileExtension", fileField.name);
     
-        let resp = await axios.post("http://decrag.xyz/", formData, {
+        let resp = await axios.post("https://decrag.xyz/", formData, {
             responseType: 'arraybuffer',
             headers: {
                 'content-type': 'multipart/form-data'
