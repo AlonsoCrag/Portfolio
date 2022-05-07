@@ -42,14 +42,15 @@ export default () => {
         formData.append("image", fileField, fileField.name);
         formData.append("name", fileName);
         formData.append("fileExtension", fileField.name);
+        formData.append("token", process.env.REACT_APP_JWT);
     
-        let resp = await axios.post("https://decrag.xyz/", formData, {
+        let resp = await axios.post("https://decrag.xyz", formData, {
             responseType: 'arraybuffer',
             headers: {
                 'content-type': 'multipart/form-data'
             }
         });
-
+        
         if (resp.status == 200) {
             updateFileStatus(null);
             updateSuccess(true);
