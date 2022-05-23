@@ -3,6 +3,7 @@ import NavBar from '../components/navbar';
 import Footer from '../components/footer';
 import copy from "copy-to-clipboard"
 import Bearz from '../assets/images/Bearz.jpg';
+import BearzGif from '../assets/images/bearz_2.gif';
 
 
 export default () => {
@@ -34,6 +35,7 @@ export default () => {
                         <h1 className='text-2xl font-bold text-white text-center'>
                             Hey there, welcome to my personal portfolio, you can call me
                             <span className='text-blue-700'> Bearz </span>
+                            because i dont have a real name u.u
                         </h1>
                         <h1 className='text-2xl font-bold text-blue-700 text-center'>
                             Developing custom web products, mobile-desktop applications, database management, sites, backend systems.
@@ -44,7 +46,7 @@ export default () => {
                     </div>
                     <div className='flex justify-center align-items-center'>
                         <div className='mt-4 w-56 h-56 rounded-full border-4 border-blue-700'>
-                            <img className='rounded-full w-full h-full object-cover' src={Bearz} />
+                            <img className='rounded-full w-full h-full object-cover' src={BearzGif} />
                         </div>
                     </div>
                     <div className='my-2 mx-4 grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-2 rounded p-2'>
