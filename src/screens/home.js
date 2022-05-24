@@ -21,7 +21,7 @@ export default () => {
         ['https://th.bing.com/th/id/R.cb5d9888c8ac0cc1b05cecf5ede1f358?rik=TFnNMgPwVa7Oag&pid=ImgRaw&r=0', 'Golang'],
         ['https://th.bing.com/th/id/OIP.39mOMBjUfsK-HL9jUbv1MwHaE7?pid=ImgDet&rs=1', 'Javascript'],
         ['https://th.bing.com/th/id/OIP.kTH4G9nPxCAQsUv47tQ8ggHaEK?pid=ImgDet&rs=1', 'Dart'],
-        ['https://th.bing.com/th/id/OIP.wakmn-NeIS77tDE0bFTYLQHaEK?pid=ImgDet&rs=1', 'Solidity'],
+        ['https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Rustacean-orig-noshadow.svg/440px-Rustacean-orig-noshadow.svg.png', 'Rust'],
     ]
 
     let [ textCopy, updateCopyText  ] = useState(null);
@@ -35,7 +35,7 @@ export default () => {
                         <h1 className='text-2xl font-bold text-white text-center'>
                             Hey there, welcome to my personal portfolio, you can call me
                             <span className='text-blue-700'> Bearz </span>
-                            because i dont have a real name u.u
+                            if you want.
                         </h1>
                         <h1 className='text-2xl font-bold text-blue-700 text-center'>
                             Developing custom web products, mobile-desktop applications, database management, sites, backend systems.
@@ -46,7 +46,7 @@ export default () => {
                     </div>
                     <div className='flex justify-center align-items-center'>
                         <div className='mt-4 w-56 h-56 rounded-full border-4 border-blue-700'>
-                            <img className='rounded-full w-full h-full object-cover' src={BearzGif} />
+                            <img className='rounded-full w-full h-full object-cover' src={Bearz} />
                         </div>
                     </div>
                     <div className='my-2 mx-4 grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-2 rounded p-2'>
