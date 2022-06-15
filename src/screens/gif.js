@@ -44,7 +44,9 @@ export default () => {
         formData.append("fileExtension", fileField.name);
         formData.append("token", process.env.REACT_APP_JWT);
     
-        let resp = await axios.post("https://decrag.xyz", formData, {
+        // https://decrag.xyz
+
+        let resp = await axios.post("http://localhost:8000", formData, {
             responseType: 'arraybuffer',
             headers: {
                 'content-type': 'multipart/form-data'
@@ -69,7 +71,6 @@ export default () => {
             link.parentNode.removeChild(link);
             return;
         }
-        // console.log("Error while trying to convert...")
     }
     
 
