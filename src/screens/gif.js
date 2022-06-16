@@ -46,7 +46,7 @@ export default () => {
     
         // https://decrag.xyz
 
-        let resp = await axios.post("https://decrag.xyz", formData, {
+        let resp = await axios.post("https://decrag.xyz/", formData, {
             responseType: 'arraybuffer',
             headers: {
                 'content-type': 'multipart/form-data'
